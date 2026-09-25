@@ -1,4 +1,3 @@
--- Orchard
 --
 -- Light and dark variants follow 'background', which Neovim detects from the
 -- terminal and updates live when the terminal switches appearance.
@@ -350,7 +349,43 @@ local groups = {
   ["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
   ["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
 
-  -- netrw (`orch .`)
+  -- Pickers and explorer: file names in label color, folders by icon only.
+  SnacksPickerPrompt = { fg = c.secondary },
+  SnacksPickerInputSearch = { fg = c.fg },
+  SnacksPickerMatch = { fg = c.accent, bold = true },
+  SnacksPickerDirectory = { fg = c.fg },
+  SnacksPickerDir = { fg = c.secondary },
+  SnacksPickerPathHidden = { fg = c.secondary },
+  SnacksPickerPathIgnored = { fg = c.tertiary },
+  SnacksPickerTree = { fg = c.tertiary },
+  SnacksPickerTotals = { fg = c.secondary },
+  SnacksPickerRow = { fg = c.secondary },
+  SnacksPickerCol = { fg = c.tertiary },
+  SnacksPickerSelected = { fg = c.accent },
+  SnacksPickerUnselected = { fg = c.tertiary },
+  SnacksPickerSpinner = { fg = c.secondary },
+  SnacksPickerGitStatusModified = { fg = c.orange },
+  SnacksPickerGitStatusUntracked = { fg = c.secondary },
+
+  -- Key hints
+  WhichKey = { fg = c.fg, bold = true },
+  WhichKeyGroup = { fg = c.accent },
+  WhichKeyDesc = { fg = c.fg },
+  WhichKeySeparator = { fg = c.tertiary },
+  WhichKeyValue = { fg = c.secondary },
+
+  -- File icons
+  MiniIconsAzure = { fg = c.accent },
+  MiniIconsBlue = { fg = c.blue },
+  MiniIconsCyan = { fg = c.teal },
+  MiniIconsGreen = { fg = c.green },
+  MiniIconsGrey = { fg = c.secondary },
+  MiniIconsOrange = { fg = c.orange },
+  MiniIconsPurple = { fg = c.purple },
+  MiniIconsRed = { fg = c.red },
+  MiniIconsYellow = { fg = c.yellow },
+
+  -- netrw
   netrwClassify = { fg = c.tertiary },
   netrwTreeBar = { fg = c.tertiary },
   netrwExe = { fg = c.green },

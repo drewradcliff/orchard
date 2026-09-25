@@ -8,5 +8,6 @@ vim.g.maplocalleader = "\\"
 require("orchard.options")
 vim.cmd.colorscheme("orchard")
 require("orchard.highlights")
+require("orchard.plugins")
 require("orchard.keymaps")
 require("orchard.autocmds")

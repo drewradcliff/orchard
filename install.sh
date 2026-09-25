@@ -31,3 +31,16 @@ if ! grep -qF "$ALIAS" "$RC" 2>/dev/null; then
 else
   echo "alias already present in $RC"
 fi
+
+if NVIM_APPNAME="$APPNAME" nvim --headless "+qa" >/dev/null 2>&1; then
+  echo "installed plugins"
+else
+  echo "warning: plugin install failed; they'll install on first launch" >&2
+fi
+
+missing=()
+command -v rg >/dev/null || missing+=(ripgrep)
+command -v fd >/dev/null || missing+=(fd)
+if [ ${#missing[@]} -gt 0 ]; then
+  echo "tip: install ${missing[*]} for fast search (brew install ${missing[*]})"
+fi
