@@ -1,6 +1,10 @@
 -- Floats and popup menus share the editor background so rounded borders
--- don't leave square corners of a different color.
+-- don't leave square corners of a different color. The Orchard colorscheme
+-- already does this; the fallback is for any other colorscheme.
 local function apply()
+  if vim.g.colors_name == "orchard" then
+    return
+  end
   local get = function(name)
     return vim.api.nvim_get_hl(0, { name = name, link = false })
   end
