@@ -1,5 +1,13 @@
 {
   "plugins": {
+    "codediff.nvim": {
+      "rev": "09d9ebef2cc5a5c04db7a349cd6c61bdf84ecc8e",
+      "src": "https://github.com/esmuellert/codediff.nvim"
+    },
+    "gitsigns.nvim": {
+      "rev": "070a5d7b985546cc57e1fc61e5bc507fecac6045",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim"

@@ -367,6 +367,11 @@ local groups = {
   SnacksPickerGitStatusModified = { fg = c.orange },
   SnacksPickerGitStatusUntracked = { fg = c.secondary },
 
+  -- Diff review: file statuses match the picker; filler hatching stays faint.
+  CodeDiffFiller = { fg = c.tertiary },
+  CodeDiffStatusModified = { fg = c.orange },
+  CodeDiffStatusUntracked = { fg = c.secondary },
+
   -- Key hints
   WhichKey = { fg = c.fg, bold = true },
   WhichKeyGroup = { fg = c.accent },

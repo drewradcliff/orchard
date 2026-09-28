@@ -6,7 +6,10 @@ end
 vim.pack.add({
   gh("folke/snacks.nvim"),
   gh("folke/which-key.nvim"),
+  gh("lewis6991/gitsigns.nvim"),
+  gh("esmuellert/codediff.nvim"),
 }, { confirm = false })
 
 require("which-key").setup({ preset = "helix" })
 require("orchard.picker")
+require("orchard.git")
