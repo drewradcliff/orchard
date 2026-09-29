@@ -48,6 +48,8 @@ Changed lines show a bar in the gutter. `ih` selects the change under the cursor
 
 In the review workspace (`Space g d`): `Enter` opens a file's diff, `-` stages or unstages it, `S` / `U` stage or unstage everything, `X` discards, `t` toggles side-by-side and inline, `q` closes, `g?` all keys. The diff engine downloads the first time you open it.
 
+Markdown files render in place: `Space m p` opens a rendered preview to the side, `Space m r` toggles rendering.
+
 In the explorer: `a` add, `r` rename, `d` delete (to trash), `c` copy, `m` move, `o` open with default app, `/` filter, `?` all keys.
 
 To update plugins, run `:lua vim.pack.update()`.

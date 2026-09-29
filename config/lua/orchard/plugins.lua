@@ -8,8 +8,10 @@ vim.pack.add({
   gh("folke/which-key.nvim"),
   gh("lewis6991/gitsigns.nvim"),
   gh("esmuellert/codediff.nvim"),
+  gh("MeanderingProgrammer/render-markdown.nvim"),
 }, { confirm = false })
 
 require("which-key").setup({ preset = "helix" })
 require("orchard.picker")
 require("orchard.git")
+require("orchard.markdown")
