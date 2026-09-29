@@ -135,7 +135,8 @@ map("n", "<leader>gs", pick("git_status"), "Git status")
 map("n", "<leader>gl", pick("git_log"), "Git log")
 map("n", "<leader>gb", pick("git_branches"), "Git branches")
 
--- LSP: the built-in mappings, shown in the picker.
+-- LSP: gd plus the built-in mappings, shown in the picker.
+map("n", "gd", pick("lsp_definitions"), "Definition")
 map("n", "grr", pick("lsp_references"), "References")
 map("n", "gri", pick("lsp_implementations"), "Implementations")
 map("n", "grt", pick("lsp_type_definitions"), "Type definitions")

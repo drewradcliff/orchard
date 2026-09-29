@@ -9,9 +9,11 @@ vim.pack.add({
   gh("lewis6991/gitsigns.nvim"),
   gh("esmuellert/codediff.nvim"),
   gh("MeanderingProgrammer/render-markdown.nvim"),
+  gh("neovim/nvim-lspconfig"),
 }, { confirm = false })
 
 require("which-key").setup({ preset = "helix" })
 require("orchard.picker")
 require("orchard.git")
 require("orchard.markdown")
+require("orchard.lsp")
