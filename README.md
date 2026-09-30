@@ -11,8 +11,6 @@ Neovim with thoughtful defaults
 ## Install
 
 ```sh
-git clone https://github.com/<you>/orchard.git
-cd orchard
 ./install.sh
 source ~/.zshrc
 ```
@@ -74,8 +72,6 @@ Problems appear at the end of the line, and the line number turns red or yellow.
 | `]d` / `[d` | Next / previous problem, with its full message |
 | `gra` / `grn` | Quick fix / rename |
 | `Space t h` | Toggle inline type hints |
-
-Markdown files render in place: `Space m p` opens a rendered preview to the side, `Space m r` toggles rendering.
 
 In the explorer: `a` add, `r` rename, `d` delete (to trash), `c` copy, `m` move, `o` open with default app, `/` filter, `?` all keys.
 
