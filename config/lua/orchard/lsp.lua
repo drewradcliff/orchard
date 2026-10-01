@@ -180,9 +180,6 @@ vim.lsp.enable({
   "sourcekit",
 })
 
--- Inferred types and parameter names appear inline.
-vim.lsp.inlay_hint.enable()
-
 require("which-key").add({ { "<leader>t", group = "Toggle" } })
 vim.keymap.set("n", "<leader>th", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
