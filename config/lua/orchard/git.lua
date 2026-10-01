@@ -1,4 +1,4 @@
--- Git like VS Code: thin change bars in the gutter with per-change actions
+-- thin change bars in the gutter with per-change actions
 -- (gitsigns), and a side-by-side review workspace (codediff).
 local gitsigns = require("gitsigns")
 
@@ -50,6 +50,13 @@ gitsigns.setup({
     end, "Blame line", buf)
     map({ "o", "x" }, "ih", gitsigns.select_hunk, "Change", buf)
   end,
+})
+
+require("codediff").setup({
+  diff = {
+    layout = "inline",
+    compact = true,
+  },
 })
 
 map("n", "<leader>gd", "<Cmd>CodeDiff<CR>", "Review changes")
