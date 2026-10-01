@@ -1,9 +1,25 @@
 -- Quick-open pickers use a compact search panel; the rest show a preview.
 local quick = { smart = true, files = true, git_files = true, recent = true, buffers = true }
 
+-- Opening a directory (`orch .`) cds into it and starts on an empty buffer
+-- instead of netrw or the explorer.
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local arg = vim.fn.argv(0) --[[@as string]]
+    if vim.fn.argc() == 1 and vim.fn.isdirectory(arg) == 1 then
+      local dir_buf = vim.api.nvim_get_current_buf()
+      vim.cmd.cd(arg)
+      vim.cmd.enew()
+      vim.api.nvim_buf_delete(dir_buf, { force = true })
+    end
+  end,
+})
+
 require("snacks").setup({
-  -- Opening a directory (`orch .`) shows the explorer instead of netrw.
-  explorer = {},
+  -- Keep the explorer closed on startup; toggle it with its keymap.
+  explorer = { replace_netrw = false },
 
   picker = {
     prompt = "󰍉 ",
